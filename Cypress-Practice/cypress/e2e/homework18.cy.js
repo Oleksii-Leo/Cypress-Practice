@@ -34,7 +34,7 @@ describe("Search elements", () => {
     cy.contains("Home");
   });
 
-  //Пошук по мейл
+  //Пошук по мейл!
   it("by mail selector", () => {
     cy.get('a[href*="mailto:developer@ithillel.ua"]').should("be.visible");
   });

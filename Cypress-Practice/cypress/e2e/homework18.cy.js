@@ -7,7 +7,7 @@
 //cy.visit("https://qauto.forstudy.space", {
 //auth: {
 // username: "guest",
-//password: "welcome2qauto",
+//password: "welcome2auto",
 //},
 //});
 //});
@@ -34,7 +34,7 @@ describe("Search elements", () => {
     cy.contains("Home");
   });
 
-  //Пошук
+  //Пошук по мейл
   it("by mail selector", () => {
     cy.get('a[href*="mailto:developer@ithillel.ua"]').should("be.visible");
   });

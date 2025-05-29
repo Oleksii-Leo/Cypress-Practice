@@ -23,3 +23,23 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+// cypress/support/commands.js
+
+// Кастомна команда login
+// cypress/support/commands.js
+
+Cypress.Commands.overwrite("type", (originalFn, element, text, options) => {
+  if (options && options.sensitive) {
+    // Вимикаємо оригінальне логування для цієї команди
+    options.log = false;
+    // Створюємо власне логування із замаскованим повідомленням
+    Cypress.log({
+      $el: element,
+      name: "type",
+      message: "*".repeat(text.length), // Замінюємо пароль зірочками
+    });
+  }
+
+  // Викликаємо оригінальну функцію `type`
+  return originalFn(element, text, options);
+});

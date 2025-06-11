@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:mainConfig": "npx cypress run --config-file cypress.config.js",
+    "test:secondConfig": "npx cypress run --config-file cypress2.config.js",
+    "test:uiMainConfig": "npx cypress open --config-file cypress.config.js",
+    "test:uiSecondConfig": "npx cypress open --config-file cypress2.config.js"
   },
   "author": "",
   "license": "ISC",

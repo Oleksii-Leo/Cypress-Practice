@@ -12,4 +12,12 @@ module.exports = defineConfig({
     video: true,
     projectId: "vhjes7",
   },
+  //});
+
+  env: {
+    Auth_UserName: "guest",
+    Auth_Password: "welcome2qauto",
+    TEST_USER_EMAIL: "johnywalker2@gmail.com",
+    TEST_USER_PASSWORD: "Qwerty123",
+  },
 });
